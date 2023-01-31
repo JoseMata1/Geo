@@ -25,6 +25,6 @@ require('./sockets')(io);
 app.use(express.static(path.join(__dirname,'public')));
 
 // Starting the server
-server.listen(3000, () => {
+server.listen( process.env.PORT || 3000, () => {
     //console.log('server on port 3000');
 })
